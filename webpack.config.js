@@ -14,7 +14,7 @@ module.exports = {
     module: {
         rules: [
             {
-                test : /\.jsx?$/,
+                test: /\.jsx?$/,
                 exclude: /node_modules/,
                 use: {
                     loader: 'babel-loader'
@@ -27,22 +27,32 @@ module.exports = {
             {
                 test: /\.svg$/,
                 loader: 'svg-inline-loader'
-            }
-        ]
-    },
-    plugins: [
-        new HtmlWebpackPlugin({
-            template: path.resolve(__dirname, './src/index.html'),
-            filename: 'index.html'
-        }),
-        new CleanWebpackPlugin()
-    ],
-    devServer: {
-        historyApiFallback: true,
-        open: true,
-        compress: true,
-        hot: true,
-        port: 8080,
-    },
-    devtool :'source-map'
+            },
+            {
+                test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
+                use: [
+                    {
+                        loader: 'file-loader',
+                        options: {
+                            name: '[name].[ext]',
+                            outputPath: 'fonts/'
+                        }
+                    }
+                ]
+            },
+            plugins: [
+                new HtmlWebpackPlugin({
+                    template: path.resolve(__dirname, './src/index.html'),
+                    filename: 'index.html'
+                }),
+                new CleanWebpackPlugin()
+            ],
+            devServer: {
+                historyApiFallback: true,
+                open: true,
+                compress: true,
+                hot: true,
+                port: 8080,
+            },
+            devtool : 'source-map'
 }
