@@ -1,0 +1,1 @@
+const artistTitles = `Save your tears The weeknd`
