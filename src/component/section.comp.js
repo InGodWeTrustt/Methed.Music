@@ -1,5 +1,6 @@
 import React from "react";
 import Photo1 from '../img/photo1.jpg'
+import Card from './card.comp'
 
 export default function Section() {
     return (

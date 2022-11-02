@@ -5,9 +5,10 @@ import Img from './img.comp'
 export default function Card() {
     return (
         <>
-            <button className="catalog__item track">
-                {createList.map( ({src, title, artist}) => {
-                    return (
+
+            {createList().map(({ src, title, artist }) => {
+                return (
+                    <button className="catalog__item track">
                         <div className="track__img-wrap">
                             <Img
                                 className={'track__poster'}
@@ -22,9 +23,9 @@ export default function Card() {
                                 <p className="track_info__artist">{artist}</p>
                             </div>
                         </div>
-                    )
-                })}
-            </button>
+                    </button>
+                )
+            })}
         </>
     )
 }
