@@ -1,3 +1,8 @@
 @import 'normalize.css';
 @import 'fonts.css';
-@import 'default.css'
+@import 'default.css';
+@import 'header.css';
+@import 'search.css';
+@import 'catalog.css';
+@import 'track.css';
+@import 'track-info.css'

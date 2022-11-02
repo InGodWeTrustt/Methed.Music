@@ -1,0 +1,31 @@
+.header {
+    padding-top: 24px;
+    padding-bottom: 24px;
+}
+
+.header__container {
+    min-width: 1180px;
+    padding: 0 30px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+}
+
+.header__logo {
+    margin-right: 94px;
+}
+
+.header__search {
+    flex-grow: 1;
+    margin-right: auto;
+}
+
+.header__favorite-btn {
+    color: white;
+    line-height: 0;
+    transition: color .2s ease-in-out;
+}
+
+.header__favorite-btn:hover {
+    color: tomato;
+}
