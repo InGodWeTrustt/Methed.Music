@@ -1,27 +1,27 @@
 // название трека артист
 const artistTitles = `Save your tears
-Follow You
-Dirt Femme
-Another Love
-Born to Die
-Hello
 The weeknd
+Follow You
 Imagine Dragons
+Dirt Femme
 How Long
+Another Love
 Tom Odell
+Born to Die
 Lana Del Rey
+Hello
 Adele
 Can't Pretend
-Young and Beautiful
-Someone Like You
-Natural
-laugh now cry later
-Frozen
 Tom Odell
+Young and Beautiful
 Lana Del Rey
+Someone Like You
 Adele
+Natural
 Imagine Dragons
+Laugh now cry later
 Drake
+Frozen
 Madonna`;
 
 

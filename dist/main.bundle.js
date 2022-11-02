@@ -274,7 +274,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "createList": () => (/* binding */ createList)
 /* harmony export */ });
 // название трека артист
-var artistTitles = "Save your tears\nFollow You\nDirt Femme\nAnother Love\nBorn to Die\nHello\nThe weeknd\nImagine Dragons\nHow Long\nTom Odell\nLana Del Rey\nAdele\nCan't Pretend\nYoung and Beautiful\nSomeone Like You\nNatural\nlaugh now cry later\nFrozen\nTom Odell\nLana Del Rey\nAdele\nImagine Dragons\nDrake\nMadonna";
+var artistTitles = "Save your tears\nThe weeknd\nFollow You\nImagine Dragons\nDirt Femme\nHow Long\nAnother Love\nTom Odell\nBorn to Die\nLana Del Rey\nHello\nAdele\nCan't Pretend\nTom Odell\nYoung and Beautiful\nLana Del Rey\nSomeone Like You\nAdele\nNatural\nImagine Dragons\nLaugh now cry later\nDrake\nFrozen\nMadonna";
 function createList() {
   var res = [];
   var info = {};

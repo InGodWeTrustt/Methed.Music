@@ -1,6 +1,7 @@
 import React from "react";
 import { createList } from "../db_img";
 import Img from './img.comp'
+
 import photo1 from '../img/photo1.jpg'
 import photo2 from '../img/photo2.jpg'
 import photo3 from '../img/photo3.jpg'
