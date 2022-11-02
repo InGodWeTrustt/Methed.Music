@@ -14,19 +14,20 @@ import photo10 from '../img/photo10.jpg'
 import photo11 from '../img/photo11.jpg'
 import photo12 from '../img/photo12.jpg'
 
-const iamges
+const images = [photo1, photo2, photo3, photo4, photo5, photo6, photo7, photo8, photo9, photo10, photo11, photo12]
 
 export default function Card() {
     return (
         <>
 
-            {createList().map(({ src, title, artist }) => {
+            {createList().map(({title, artist }) => {
+                const src = images.shift()
                 return (
                     <button className="catalog__item track">
                         <div className="track__img-wrap">
                             <Img
                                 className={'track__poster'}
-                                src={photo1}
+                                src={src}
                                 alt={`${artist} - ${title}`}
                                 height={180}
                                 width={180}
