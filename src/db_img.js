@@ -27,18 +27,16 @@ Madonna`;
 
 export function createList() {
     const res = []
-    const info = {
-        title: '',
-        src: '',
-        artist: ''
-    }
+    let info = {}
 
     artistTitles.split('\n').forEach((elem, i) => {
         if ((i + 1) % 2 === 0) {
             info.artist = elem;
-            info.src = `../img/photo${i + 1}`
+            info.src = `photo${i}`
             res.push(info)
+            info = null;
         } else {
+            info = {}
             info.title = elem
         }
     })
