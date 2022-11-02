@@ -7,22 +7,7 @@ export default function Section() {
             <section className="catalog">
                 <h2 className="visually-hidden">Список треков</h2>
                 <div className="catalog__container">
-                    <button className="catalog__item track">
-                        <div className="track__img-wrap">
-                            <img
-                                className="track__poster"
-                                src={Photo1}
-                                alt="The weeknd - Save your tears"
-                                width='180'
-                                height='180'
-                            />
-
-                            <div className="track__info track-info">
-                                <p className="track-info__title">Save your tears</p>
-                                <p className="track_info__artist">The weeknd</p>
-                            </div>
-                        </div>
-                    </button>
+                   <Card></Card>
                 </div>
             </section>
 

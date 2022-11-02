@@ -1,3 +1,4 @@
+// название трека артист
 const artistTitles = `Save your tears
 Follow You
 Dirt Femme
@@ -23,20 +24,24 @@ Imagine Dragons
 Drake
 Madonna`;
 
-export function createList(){
+
+export function createList() {
     const res = []
     const info = {
-        title:'',
-        path: '',
+        title: '',
+        src: '',
         artist: ''
     }
 
-    artistTitles.split('\n').forEach( (elem, i) =>{
-        if((i+1) % 2 === 0){
+    artistTitles.split('\n').forEach((elem, i) => {
+        if ((i + 1) % 2 === 0) {
             info.artist = elem;
+            info.src = `../img/photo${i + 1}`
             res.push(info)
         } else {
             info.title = elem
         }
     })
+
+    return res
 }
