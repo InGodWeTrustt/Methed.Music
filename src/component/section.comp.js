@@ -37,7 +37,7 @@ export default function Section() {
                         <div className="player__progress">
                             <input type="range" className="player__progress-input" min="0" max="100" value="0" />
                         </div>
-                        <p className="player_time">
+                        <p className="  ">
                             <span className="player__time-passed">0:24</span>
                             <span>/</span>
                             <span className="player__time-total">4:31</span>
