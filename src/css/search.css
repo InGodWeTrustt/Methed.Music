@@ -15,6 +15,7 @@
     font-style: 14px;
 }
 
+/* чтобы скрыть отображение крестика*/
 .search__input::-webkit-search-cancel-button{
     display: none;
 }

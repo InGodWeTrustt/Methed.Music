@@ -2,13 +2,12 @@
     position: fixed;
     left: 0;
     right: 0;
-    /*чтобы скрыть этот элемент */
     bottom: -100%;
-    max-width: 1228px;
-    margin: 0 auto;
     background: rgba(255, 255, 255, 0.7);
     backdrop-filter: blur(6px);
     border-radius: 20px;
+    max-width: 1228px;
+    margin: 0 auto;
     padding: 24px;
     transition: bottom .5s ease;
 }

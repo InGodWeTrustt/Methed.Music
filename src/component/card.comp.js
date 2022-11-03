@@ -36,7 +36,7 @@ export default function Card() {
 
                             <div className="track__info track-info">
                                 <p className="track-info__title">{title}</p>
-                                <p className="track_info__artist">{artist}</p>
+                                <p className="track-info__artist">{artist}</p>
                             </div>
                         </div>
                     </button>

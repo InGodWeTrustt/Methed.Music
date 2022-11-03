@@ -1,0 +1,13 @@
+.track-info {
+    text-align: left;
+}
+
+.track-info__title {
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
+.track-info__artist {
+    font-weight: 300;
+    font-size: 14px;
+}
