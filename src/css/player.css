@@ -63,7 +63,7 @@
     background-image: url('../img/like-o.svg');
 }
 
-.player___progress-wrap {
+.player__progress-wrap {
     display: flex;
     align-items: center;
     gap: 16px;

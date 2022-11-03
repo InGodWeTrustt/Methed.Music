@@ -33,7 +33,7 @@ export default function Section() {
                         <button className="player__icon player__icon_like"></button>
                     </div>
 
-                    <div className="player___progress-wrap">
+                    <div className="player__progress-wrap">
                         <div className="player__progress">
                             <input type="range" className="player__progress-input" min="0" max="100" value="0" />
                         </div>
