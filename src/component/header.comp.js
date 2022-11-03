@@ -4,7 +4,7 @@ import Logo from '../img/logo.svg'
 export default function Header() {
     return (
         <header className="header">
-            <h1 className="visuality-hidden">Methed.Music - лучший сервис для воспроизведения качественной музыки</h1>
+            <h1 className="visually-hidden">Methed.Music - лучший сервис для воспроизведения качественной музыки</h1>
             <div className="header__container">
                 <img className="header__logo" src={Logo} alt="Логотип Methed.Music"></img>
 
