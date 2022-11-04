@@ -1,10 +1,10 @@
 {
   "name": "methed.music",
-  "version": "1.0.0",
-  "description": "",
+  "version": "1.0.1",
+  "description": "Музыкальный плеер",
   "main": "index.js",
   "scripts": {
-    "build": "webpack",
+    "build": "webpack --mode=production",
     "dev": "webpack serve",
     "deploy" : "gh-pages -d dist"
   },
@@ -12,8 +12,12 @@
     "type": "git",
     "url": "git+https://github.com/InGodWeTrustt/Methed.Music.git"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "react", "webpack"
+  ],
+  "author": {
+    "name": "Evgeniy"
+  },
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/InGodWeTrustt/Methed.Music/issues"
