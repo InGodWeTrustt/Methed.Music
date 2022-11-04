@@ -37,7 +37,7 @@ export default function Section() {
                         <div className="player__progress">
                             <input type="range" className="player__progress-input" min="0" max="100" value="0" />
                         </div>
-                        <p className="  ">
+                        <p className="player__time">
                             <span className="player__time-passed">0:24</span>
                             <span>/</span>
                             <span className="player__time-total">4:31</span>
@@ -49,9 +49,9 @@ export default function Section() {
                             <input
                                 className="player__volume-input"
                                 type="range"
-                                min={0}
-                                max={100}
-                                value={100}
+                                min='0'
+                                max='100'
+                                value='100'
                             />
                         </div>
                         <button className="player__icon player__icon_mute"></button>
