@@ -37,13 +37,16 @@ module.exports = {
     },
     plugins: [
         new HtmlWebpackPlugin({
-            template: path.resolve(__dirname, './src/index.html'),
+            template: path.resolve(__dirname, './public/index.html'),
             filename: 'index.html',
-            favicon : path.resolve(__dirname, './src/favicon.ico')
+            favicon : path.resolve(__dirname, './public/favicon.ico')
         }),
         new CleanWebpackPlugin()
     ],
     devServer: {
+        static: {
+            directory: path.resolve(__dirname, './public')
+        },
         historyApiFallback: true,
         open: true,
         compress: true,

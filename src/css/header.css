@@ -9,10 +9,12 @@
     margin: 0 auto;
     display: flex;
     align-items: center;
+    gap: 25px;
+    justify-content: space-between;
 }
 
 .header__logo {
-    margin-right: 94px;
+    margin-right: 69px;
 }
 
 .header__search {
@@ -28,4 +30,47 @@
 
 .header__favorite-btn:hover {
     color: tomato;
+}
+
+@media (max-width: 1024px) {
+    .header__container {
+        padding: 0 22px;
+    }
+
+    .header__search {
+        margin-right: 90px;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .header__container {
+        padding: 0 15px;
+        max-width: 610px;
+    }
+
+    .header__logo {
+        margin-right: 12px;
+    }
+
+    .header__search {
+        margin-right: 0;
+    }
+}
+
+
+@media (max-width: 560px) {
+    .header {
+        padding-top: 20px;
+    }
+
+    .header__container {
+        flex-wrap: wrap;
+        gap: 17px;
+    }
+
+    .header__search {
+        order: 1;
+        flex-basis: 100%;
+    }
 }

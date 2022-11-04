@@ -21,7 +21,7 @@ export default function Section() {
             <section className="player player_active">
                 <h1 className="visually-hidden">Плеер</h1>
                 <div className="player__container">
-                    <div className="player__track-info track-info">
+                    <div className="player__track-info track-info track-info_mobile-center">
                         <p className="player-info__title">Save your tears</p>
                         <p className="player_info__artist">The weeknd</p>
                     </div>

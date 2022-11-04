@@ -73,3 +73,14 @@
 .track_active:hover .track__img-wrap:after {
     background-color: #fff;
 }
+
+@media (max-width: 560px) {
+    .track{
+        padding: 3px;
+        border-width: 1px;
+        border-radius: 14px;
+    }
+    .track__info {
+        padding: 8px;
+    }
+}
