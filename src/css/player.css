@@ -81,7 +81,6 @@
     cursor: pointer;
     background-color: transparent;
     appearance: none;
-    -webkit-appearance: none;
 }
 
 .player__progress-input::-webkit-slider-runnable-track {

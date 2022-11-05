@@ -14,22 +14,27 @@ import photo9 from '../img/photo9.jpg'
 import photo10 from '../img/photo10.jpg'
 import photo11 from '../img/photo11.jpg'
 import photo12 from '../img/photo12.jpg'
+import useAudio from "./useHook/useAudio";
 
+
+// Массив импортированных изображений
 const images = [photo1, photo2, photo3, photo4, photo5, photo6, photo7, photo8, photo9, photo10, photo11, photo12]
 
 export default function Card() {
+    const [playing, toogle] = useAudio()
     return (
         <>
 
-            {createList().map(({title, artist }) => {
+            {createList().map(({ title, artist }) => {
                 const src = images.shift()
+                const artistWithTitle = `${artist} - ${title}`
                 return (
-                    <button className="catalog__item track">
+                    <button className="catalog__item track" data-track={'audio/' + artistWithTitle + '.mp3'}>
                         <div className="track__img-wrap">
                             <Img
                                 className={'track__poster'}
                                 src={src}
-                                alt={`${artist} - ${title}`}
+                                alt={artistWithTitle}
                                 height={180}
                                 width={180}
                             />

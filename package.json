@@ -6,14 +6,15 @@
   "scripts": {
     "build": "webpack --mode=production",
     "dev": "webpack serve",
-    "deploy" : "gh-pages -d dist"
+    "deploy": "gh-pages -d dist"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/InGodWeTrustt/Methed.Music.git"
   },
   "keywords": [
-    "react", "webpack"
+    "react",
+    "webpack"
   ],
   "author": {
     "name": "Evgeniy"
@@ -29,6 +30,7 @@
     "@babel/preset-react": "^7.18.6",
     "babel-loader": "^9.0.1",
     "clean-webpack-plugin": "^4.0.0",
+    "copy-webpack-plugin": "^11.0.0",
     "css-loader": "^6.7.1",
     "file-loader": "^6.2.0",
     "gh-pages": "^4.0.0",

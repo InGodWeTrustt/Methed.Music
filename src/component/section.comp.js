@@ -23,7 +23,7 @@ export default function Section() {
                 <div className="player__container">
                     <div className="player__track-info track-info track-info_mobile-center">
                         <p className="player-info__title">Save your tears</p>
-                        <p className="player_info__artist">The weeknd</p>
+                        <p className="player-info__artist">The weeknd</p>
                     </div>
                     <div className="player__controller">
                         <button className="player__icon player__icon_stop"></button>

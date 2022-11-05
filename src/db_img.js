@@ -1,6 +1,6 @@
 // название трека артист
 const artistTitles = `Save your tears
-The weeknd
+The Weeknd
 Follow You
 Imagine Dragons
 Dirt Femme
