@@ -1,6 +1,6 @@
 import React from "react";
-import { createList } from "../db_img";
 import Img from './img.comp'
+import useAudio from "../useHook/useAudio";
 
 import photo1 from '../img/photo1.jpg'
 import photo2 from '../img/photo2.jpg'
@@ -14,22 +14,21 @@ import photo9 from '../img/photo9.jpg'
 import photo10 from '../img/photo10.jpg'
 import photo11 from '../img/photo11.jpg'
 import photo12 from '../img/photo12.jpg'
-import useAudio from "./useHook/useAudio";
 
 
 // Массив импортированных изображений
 const images = [photo1, photo2, photo3, photo4, photo5, photo6, photo7, photo8, photo9, photo10, photo11, photo12]
 
-export default function Card() {
+export default function Card({data}) {
     const [playing, toogle] = useAudio()
     return (
         <>
 
-            {createList().map(({ title, artist }) => {
+            {data.map(({ title, artist, id }) => {
                 const src = images.shift()
                 const artistWithTitle = `${artist} - ${title}`
                 return (
-                    <button className="catalog__item track" data-track={'audio/' + artistWithTitle + '.mp3'}>
+                    <button key={id} className="catalog__item track" data-track={'audio/' + artistWithTitle + '.mp3'} data-idTrack={id} onClick={() => {}}>
                         <div className="track__img-wrap">
                             <Img
                                 className={'track__poster'}

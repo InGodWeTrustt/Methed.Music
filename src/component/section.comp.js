@@ -1,14 +1,17 @@
 import React from "react";
-import Photo1 from '../img/photo1.jpg'
 import Card from './card.comp'
+import Player from "./player.comp";
 
-export default function Section() {
+export default function Sections({ data }) {
+    // console.log('data: ', data);
     return (
         <>
             <section className="catalog">
                 <h2 className="visually-hidden">Список треков</h2>
                 <div className="catalog__container">
-                    <Card></Card>
+                    <Card
+                        data={data}
+                    />
                     <button className="catalog__btn-add">
                         <span>Увидеть все</span>
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -18,46 +21,7 @@ export default function Section() {
                 </div>
             </section>
 
-            <section className="player player_active">
-                <h1 className="visually-hidden">Плеер</h1>
-                <div className="player__container">
-                    <div className="player__track-info track-info track-info_mobile-center">
-                        <p className="player-info__title">Save your tears</p>
-                        <p className="player-info__artist">The weeknd</p>
-                    </div>
-                    <div className="player__controller">
-                        <button className="player__icon player__icon_stop"></button>
-                        <button className="player__icon player__icon_prev"></button>
-                        <button className="player__icon player__icon_pause"></button>
-                        <button className="player__icon player__icon_next"></button>
-                        <button className="player__icon player__icon_like"></button>
-                    </div>
-
-                    <div className="player__progress-wrap">
-                        <div className="player__progress">
-                            <input type="range" className="player__progress-input" min="0" max="100" value="0" />
-                        </div>
-                        <p className="player__time">
-                            <span className="player__time-passed">0:24</span>
-                            <span>/</span>
-                            <span className="player__time-total">4:31</span>
-                        </p>
-                    </div>
-
-                    <div className="player__volume-wrap">
-                        <div className="player__volume">
-                            <input
-                                className="player__volume-input"
-                                type="range"
-                                min='0'
-                                max='100'
-                                value='100'
-                            />
-                        </div>
-                        <button className="player__icon player__icon_mute"></button>
-                    </div>
-                </div>
-            </section>
+            <Player />
         </>
     )
 }

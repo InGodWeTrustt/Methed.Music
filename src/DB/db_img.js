@@ -32,8 +32,9 @@ export function createList() {
     artistTitles.split('\n').forEach((elem, i) => {
         if ((i + 1) % 2 === 0) {
             info.artist = elem;
-            info.src = `photo${i}`
-            res.push(info)
+            info.src = `photo${i}`;
+            info.id = `${i+1}`
+            res.push(info);
             info = null;
         } else {
             info = {}
