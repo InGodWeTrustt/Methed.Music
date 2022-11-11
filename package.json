@@ -6,7 +6,7 @@
   "scripts": {
     "build": "webpack --node-env=production",
     "dev": "webpack serve",
-    "clear" : "rd /s /q dist",
+    "clear": "rd /s /q dist",
     "deploy": "gh-pages -d dist"
   },
   "repository": {
@@ -37,6 +37,7 @@
     "file-loader": "^6.2.0",
     "gh-pages": "^4.0.0",
     "html-webpack-plugin": "^5.5.0",
+    "image-webpack-loader": "^8.1.0",
     "postcss-loader": "^7.0.1",
     "sass": "^1.55.0",
     "sass-loader": "^13.1.0",
