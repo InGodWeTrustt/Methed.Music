@@ -2,6 +2,7 @@ import React, { useState } from "react";
 
 
 const Player = ({ data = { artist: 'Имя артиста', title: "Название трека" } }) => {
+    
     const { artist, title } = data
     const [progressInput, setProgressInput] = useState(0)
     const [timePassed, setTimePassed] = useState('0:00')

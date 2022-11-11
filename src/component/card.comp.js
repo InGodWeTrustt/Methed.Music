@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Img from './img.comp'
 import useAudio from "../useHook/useAudio";
 
@@ -20,15 +20,22 @@ import photo12 from '../img/photo12.jpg'
 const images = [photo1, photo2, photo3, photo4, photo5, photo6, photo7, photo8, photo9, photo10, photo11, photo12]
 
 export default function Card({data}) {
-    const [playing, toogle] = useAudio()
+    const [url, setUrl] = useState(null)
+    const [playing, toogle] = useAudio(url)
+
+    const changeUrl = e => {
+        const track = e.currentTarget.dataset.track
+        setUrl(track)
+        toogle()
+    }
+
     return (
         <>
-
             {data.map(({ title, artist, id }) => {
                 const src = images.shift()
                 const artistWithTitle = `${artist} - ${title}`
                 return (
-                    <button key={id} className="catalog__item track" data-track={'audio/' + artistWithTitle + '.mp3'} data-idTrack={id} onClick={() => {}}>
+                    <button key={id} className="catalog__item track" data-track={'audio/' + artistWithTitle + '.mp3'} data-idTrack={id} onClick={changeUrl}>
                         <div className="track__img-wrap">
                             <Img
                                 className={'track__poster'}

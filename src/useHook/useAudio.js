@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 
 
 const useAudio = url => {
-    const [audio] = useState(new Audio(url))
+    const audio = useMemo(() => new Audio(url), []);
     const [playing, setPlaying] = useState(false)
 
     const toggle = () => setPlaying(!playing)

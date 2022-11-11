@@ -3,20 +3,21 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const webpack = require('webpack')
 const path = require('path')
 
-const publicPath = path.resolve(__dirname, './public')
-let mode = 'development'
+const public = path.resolve(__dirname, './public')
+const mode = process.env.NODE_ENV || 'development'
 
-const dev = process.env.NODE_ENV !== 'production'
+const devMode = mode === 'development'
+const target = devMode ? 'web' : 'browserslist'
+const devtool = devMode ? 'source-map' : undefined
 
 module.exports = {
     mode,
-    entry: {
-        main: path.resolve(__dirname, './src/index.js')
-    },
+    entry: ['@babel/polyfill', path.resolve(__dirname, './src/index.js')],
     output: {
         path: path.resolve(__dirname, './dist'),
         filename: '[name].[contenthash].bundle.js',
-        clean: true
+        clean: true,
+        assetModuleFilename: 'assets/[name][ext]'
     },
     module: {
         rules: [
@@ -32,11 +33,24 @@ module.exports = {
             {
                 test: /\.(png|svg|jpg|jpeg|gif)$/i,
                 type: 'asset/resource',
+                generator: {
+                    filename: 'assets/image/[name][ext]'
+                }
             },
             {
                 test: /\.(woff|woff2|eot|ttf|otf)$/i,
                 type: 'asset/resource',
+                generator: {
+                    filename: 'assets/fonts/[name][ext]'
+                }
             },
+            {
+                test: /\.(mp3|wav)$/,
+                type: 'asset/resource',
+                generator: {
+                    filename: 'assets/audio/[name][ext]'
+                }
+            }
         ]
     },
     plugins: [
@@ -49,14 +63,10 @@ module.exports = {
         })
     ],
     devServer: {
-        static: {
-            directory: publicPath
-        },
-        historyApiFallback: true,
+        port: 3000,
         open: true,
         compress: true,
         hot: true,
-        port: 8080,
     },
-    devtool: dev ? 'eval-cheap-module-source-map' : 'source-map',
+    devtool,
 }

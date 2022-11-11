@@ -4,8 +4,9 @@
   "description": "Музыкальный плеер",
   "main": "index.js",
   "scripts": {
-    "build": "webpack --mode=production",
+    "build": "webpack --node-env=production",
     "dev": "webpack serve",
+    "clear" : "rd /s /q dist",
     "deploy": "gh-pages -d dist"
   },
   "repository": {
@@ -26,6 +27,7 @@
   "homepage": "https://InGodWeTrustt.github.io/Methed.Music",
   "devDependencies": {
     "@babel/core": "^7.19.6",
+    "@babel/polyfill": "^7.12.1",
     "@babel/preset-env": "^7.19.4",
     "@babel/preset-react": "^7.18.6",
     "babel-loader": "^9.0.1",

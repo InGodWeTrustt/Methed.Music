@@ -3,7 +3,7 @@ import Card from './card.comp'
 import Player from "./player.comp";
 
 export default function Sections({ data }) {
-    // console.log('data: ', data);
+    
     return (
         <>
             <section className="catalog">
