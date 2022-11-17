@@ -11,8 +11,8 @@ import TomOdell_AnotherLove from  '/../audio/Tom Odell - Another Love.mp3'
 import TomOdell_CantPretend from  "/../audio/Tom Odell - Can't Pretend.mp3"
 import ToveLo_HowLong from  '/../audio/Tove Lo - How Long.mp3 '
 
-export default [
+export {
     Adele_Hello, Adele_SomeoneLikeYou, Drake_LaughNowCryLater, ImagineDragons_FollowYou, ImagineDragons_Natural,
     LanaDelRey_BornToDie, LanaDelRey_YoungAndBeautiful, Madonna_Frozen, TheWeeknd_SaveYourTears, TomOdell_AnotherLove, 
     TomOdell_CantPretend, ToveLo_HowLong
-]
+}
