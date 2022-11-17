@@ -3,7 +3,6 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const webpack = require('webpack')
 const path = require('path')
 
-const public = path.resolve(__dirname, './public')
 const mode = process.env.NODE_ENV || 'development'
 
 const devMode = mode === 'development'
@@ -34,26 +33,26 @@ module.exports = {
                 test: /\.(png|svg|jpg|jpeg|gif)$/i,
                 use: [
                     {
-                    loader: 'image-webpack-loader',
-                    options: {
-                        mozjpeg: {
-                            progressive: true,
-                        },
-                        optipng: {
-                            enabled: false,
-                        },
-                        pngquant: {
-                            quality: [0.65, 0.90],
-                            speed: 4
-                        },
-                        gifsicle: {
-                            interlaced: false,
-                        },
-                        webp: {
-                            quality: 75
+                        loader: 'image-webpack-loader',
+                        options: {
+                            mozjpeg: {
+                                progressive: true,
+                            },
+                            optipng: {
+                                enabled: false,
+                            },
+                            pngquant: {
+                                quality: [0.65, 0.90],
+                                speed: 4
+                            },
+                            gifsicle: {
+                                interlaced: false,
+                            },
+                            webp: {
+                                quality: 75
+                            }
                         }
-                    }
-                }],
+                    }],
                 type: 'asset/resource',
                 generator: {
                     filename: 'assets/image/[name][ext]'
@@ -68,7 +67,6 @@ module.exports = {
             },
             {
                 test: /\.(mp3|wav)$/,
-                use: 'file-loader',
                 type: 'asset/resource',
                 generator: {
                     filename: 'assets/audio/[name][ext]'
@@ -80,9 +78,9 @@ module.exports = {
         new webpack.ProgressPlugin(),
         new CleanWebpackPlugin(),
         new HtmlWebpackPlugin({
-            template: path.resolve(__dirname, './public/index.html'),
+            template: path.resolve(__dirname, './assets/index.html'),
             filename: 'index.html',
-            favicon: path.resolve(__dirname, './public/favicon.ico'),
+            favicon: path.resolve(__dirname, './assets/favicon.ico'),
         })
     ],
     devServer: {
@@ -92,4 +90,7 @@ module.exports = {
         hot: true,
     },
     devtool,
+    optimization: {
+        runtimeChunk: 'single',
+    }
 }

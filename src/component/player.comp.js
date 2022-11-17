@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 
 const Player = ({ data = { artist: 'Имя артиста', title: "Название трека" } }) => {
-    
+
     const { artist, title } = data
     const [progressInput, setProgressInput] = useState(0)
     const [timePassed, setTimePassed] = useState('0:00')
@@ -20,7 +20,7 @@ const Player = ({ data = { artist: 'Имя артиста', title: "Назван
                     <div className="player__controller">
                         <button className="player__icon player__icon_stop"></button>
                         <button className="player__icon player__icon_prev"></button>
-                        <button className="player__icon player__icon_pause"></button>
+                        <button onClick={() => { }} className="player__icon player__icon_pause"></button>
                         <button className="player__icon player__icon_next"></button>
                         <button className="player__icon player__icon_like"></button>
                     </div>

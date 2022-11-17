@@ -1,7 +1,8 @@
+
 export const dataMusic = [
     {
       id: '1',
-      artist: 'The weeknd',
+      artist: 'The Weeknd',
       track: 'Save your tears',
       poster: 'img/photo1.jpg',
       mp3: 'audio/The Weeknd - Save Your Tears.mp3',
