@@ -1,7 +1,8 @@
 import React, { useState } from "react";
+import MyButton from "../UI/button/MyButton";
+import MyInput from "../UI/input/MyInput";
 
-
-const Player = ({ data = { artist: 'Имя артиста', title: "Название трека" } }) => {
+const MusicPlayer = ({ data = { artist: 'Имя артиста', title: "Название трека" } }) => {
 
     const { artist, title } = data
     const [progressInput, setProgressInput] = useState(0)
@@ -18,16 +19,22 @@ const Player = ({ data = { artist: 'Имя артиста', title: "Назван
                         <p className="player-info__artist">{title}</p>
                     </div>
                     <div className="player__controller">
-                        <button className="player__icon player__icon_stop"></button>
-                        <button className="player__icon player__icon_prev"></button>
-                        <button onClick={() => { }} className="player__icon player__icon_pause"></button>
-                        <button className="player__icon player__icon_next"></button>
-                        <button className="player__icon player__icon_like"></button>
+                        <MyButton className="player__icon player__icon_stop"></MyButton>
+                        <MyButton className="player__icon player__icon_prev"></MyButton>
+                        <MyButton className="player__icon player__icon_pause"></MyButton>
+                        <MyButton className="player__icon player__icon_next"></MyButton>
+                        <MyButton className="player__icon player__icon_like"></MyButton>
                     </div>
 
                     <div className="player__progress-wrap">
                         <div className="player__progress">
-                            <input type="range" className="player__progress-input" min="0" max="100" value={progressInput} />
+                            <MyInput
+                                type="range"
+                                className="player__progress-input"
+                                min="0"
+                                max="100"
+                                value={progressInput}
+                            />
                         </div>
                         <p className="player__time">
                             <span className="player__time-passed">{timePassed}</span>
@@ -38,15 +45,15 @@ const Player = ({ data = { artist: 'Имя артиста', title: "Назван
 
                     <div className="player__volume-wrap">
                         <div className="player__volume">
-                            <input
+                            <MyInput
                                 className="player__volume-input"
                                 type="range"
-                                min='0'
-                                max='100'
-                                value='100'
+                                min="0"
+                                max="100"
+                                value="100"
                             />
                         </div>
-                        <button className="player__icon player__icon_mute"></button>
+                        <MyButton className="player__icon player__icon_mute"></MyButton>
                     </div>
                 </div>
             </section>
@@ -55,4 +62,4 @@ const Player = ({ data = { artist: 'Имя артиста', title: "Назван
 }
 
 
-export default Player
+export default MusicPlayer
