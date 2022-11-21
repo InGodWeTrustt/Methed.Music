@@ -4,7 +4,7 @@ export default function MyButton({ children, ...props }) {
 
   return (
     <>
-      <button className=''{...props}>
+      <button {...props}>
         {children}
       </button>
     </>

@@ -11,7 +11,7 @@ const devtool = devMode ? 'source-map' : undefined
 
 module.exports = {
     mode,
-    entry: ['@babel/polyfill', path.resolve(__dirname, './src/index.js')],
+    entry: ['@babel/polyfill', path.resolve(__dirname, './src/index.jsx')],
     output: {
         path: path.resolve(__dirname, './dist'),
         filename: '[name].[contenthash].bundle.js',

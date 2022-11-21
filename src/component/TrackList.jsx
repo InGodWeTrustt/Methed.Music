@@ -1,38 +1,39 @@
 import React, { useState } from "react";
-import imagesList from '../db/imagesList'
-import tracksList from '../db/audioTracksList'
 import Mybutton from "../UI/button/MyButton.jsx";
 import TrackInfo from "./TrackInfo.jsx";
-import MyImg from "../UI/image/MyImg";
+import MyImg from "../UI/image/MyImg.jsx";
 
-export default function TrackList({ data }) {
-
+export default function TrackList({ data: tracks, setTrackID, setTrackInfo, setIsActivePlayer }) {
     return (
         <>
-            {data.map(({ title, artist, id, mp3, poster: src }) => {
-                const src = imagesList.shift()
+            {tracks.map(({ title, artist, id, poster: imgSrc }) => {
                 const artistWithTitle = `${artist} - ${title}`
                 return (
                     <Mybutton
                         key={id}
                         className="catalog__item track"
-                        data-track={mp3}
                         data-idtrack={id}
-                        onClick={''}
-
+                        onClick={e => {
+                            const track = e.currentTarget;
+                            const trackId = e.currentTarget.dataset.idtrack
+                            setTrackID(trackId)
+                            const trackInfo = tracks.find(track => track.id === trackId)
+                            setTrackInfo(trackInfo)
+                            setIsActivePlayer(true)
+                            }}
                     >
                         <div className="track__img-wrap">
                             <MyImg
                                 className={'track__poster'}
-                                src={src}
+                                src={imgSrc}
                                 alt={artistWithTitle}
                                 height={180}
                                 width={180}
                             />
 
-                           <TrackInfo artist={''} title={''}></TrackInfo>
+                            <TrackInfo artist={artist} title={title}></TrackInfo>
                         </div>
-                    </Mybutton> 
+                    </Mybutton>
                 )
             })}
         </>

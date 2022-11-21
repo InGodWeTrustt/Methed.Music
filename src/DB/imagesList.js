@@ -10,9 +10,20 @@ import photo9 from '../img/photo9.jpg'
 import photo10 from '../img/photo10.jpg'
 import photo11 from '../img/photo11.jpg'
 import photo12 from '../img/photo12.jpg'
+import photo13 from '../img/photo13.jpg'
 
 export default [
-    photo1, photo2, photo3, photo4, photo5, photo6, photo7, photo8, photo9, photo10,
+    photo1,
+    photo2,
+    photo3,
+    photo4,
+    photo5,
+    photo6,
+    photo7,
+    photo8,
+    photo9,
+    photo10,
     photo11,
-    photo12
+    photo12,
+    photo13
 ]
